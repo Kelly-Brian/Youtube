@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/20b5129a77.js" crossorigin="anonymous"></script>
+    <title>PRACTISE PAGE 1: youtube</title>
+    <style>
+        .top-bar{
+            height: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-self: center;
+            position: sticky;
+        }
+        .youtube{
+            width: auto;
+        }
+        .input-search{
+            flex: 1;
+            border-radius: 3px;
+        }
+        .container-section{
+            display: grid;
+            grid-gap: 15px;
+            grid-template-columns: 1.5fr 3fr 2fr;
+        }
+
+        /*first part*/
+ul{
+
+    list-style: none inside;
+    margin-bottom: 30px;
+}
+li{
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 5px 0px 5px 0px;
+    margin-bottom: 10px;
+    justify-content: center;
+    cursor: pointer;
+    transition: .3s;
+    
+}
+li:hover{
+    background-color: grey;
+    color: whitesmoke;
+}
+
+a{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+    padding-left: 15px;
+    height: 25px;
+    text-align: center;
+    
+}
+.scrolling-section{
+    overflow-y: auto;
+    background-color: rgb(40, 39, 39);
+}
+/*mid-section*/
+
+.video{
+    margin-top: 20px;
+    max-width: 100%;
+  height: auto;
+    box-shadow: 3px 3px 3px rgb(6, 29, 37);
+}
+.comment-section{
+    width: 100%;
+}
+
+.creator-reaction-section{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    /*border: 1px solid purple;/*to be deleted*/
+}
+
+.creator-info-section{
+    flex: .75;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+   /* grid-template-columns: 1fr 1.5fr 1fr;*/
+   /* border: 1px solid black;/*to be deleted*/
+}
+
+.creators-dp-image{
+display: flex;
+margin-left: 0px;
+height: 45px;
+width: auto;
+
+border: 3px solid whitesmoke;
+border-radius: 50%;
+}
+.name-subscribers{
+    justify-content: center;
+    display: flex;
+   flex: 1.5;
+    flex-direction: column;
+    height: inherit;
+}
+
+.like-section{
+    
+    flex-wrap: wrap;
+   align-items: center;
+    justify-content: flex-end;
+
+}
+
+.description{
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+    background-color: rgba(173, 170, 170, 0.823);
+    border: none;
+    border-radius: 15px;
+    padding-left: 15px;
+}
+.description p{
+    margin-top: 5px;
+}
+.comments{
+    width: 100%;
+    height: auto;
+    overflow-y: scroll;
+}
+.comment-caption{
+    font-weight: bold; 
+    margin: 5px 0px 5px 5px;
+    font-size: large;
+}
+.comment-bar{
+    margin-right: 10px;
+    display: flex;
+    /*align-items: center;*/
+}
+.comment-user-dp{
+    display: inline-block;
+    width: 50px;
+}
+.the-dp{
+    margin-left: 0px;
+    height: 35px;
+    width: auto;
+    border: 2px solid whitesmoke;
+    border-radius: 50%; 
+}
+.comment-user-details{
+    display: inline-block;
+    flex: 1;
+}
+
+.user-id{
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.comment-user-details p{
+    margin-top: 5px;
+}
+.comment-like-section{
+    width: 150px;
+    justify-content: center;
+}
+/*last-part*/
+.section-1video {
+    max-width: 280px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin: 0px;
+}
+.video-image{
+    max-width: 50%;
+    height: 100%;
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 15px;
+}
+.related-video-title{
+    flex: 1;
+}
+/*buttons*/
+
+button{
+    padding: 5px 5px 5px 5px;
+    border: none;
+    border-radius: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-variant: normal;
+    cursor: pointer;
+
+}
+                   
+.Subscribe{
+    /*font-size: large;*/
+    display: flex;
+    height: 30px;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    color: whitesmoke;
+    background-color: rgb(212, 20, 20);
+}
+    </style>
+</head>
+
+<body>
+<div class="top-bar">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAGZJREFUSEvtlrENACAMw8pnnMZpfAYTC1W3CDOEA2JhUpUW0GkQNwx+Zt6qj+ohdp7yKtVLDE6c78DiC+c4t/o46WLX8877rlzYOGGqxU/scYryB4KVCwNja9GtlhvwWpQrrQIx1Rt3TwofeC3yFwAAAABJRU5ErkJggg=="/>
+    <img src="Youtube-logo-1.png" class="youtube">
+    <input type="search" class="input-search" placeholder="Search">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAmBJREFUSEvl1kuoT1EUx/HPzTMDAxPvRyKPRBkYYCCFhIm8SiGv0E1JRCZGDJBHEeUdKTJgIEwYUSYoyqtIXokUyvvR0v7r+Lv/c87913UH1ux01l7fvdbe67d2g1ayhlbiKgtuj1EYiG54jge4hs/1bL4I3BdbMRUdmwB8wBmswZPmbCAPvALbEdkW2Scsw+Eix8r/WuDIcnVy+oq9uIS7eIj+GIzxWIo2yXcDNpWBNwVejj1pcZzjFNzLCTYc59Az+czGySJ4NXgIbqJdym4sXhUFQS9cQW+8xyA8y1tXDb6AiemmxuJHJaAVlxG4zq9OOYr5ZcFd8Do578CqZkArricwB28R8b7VipHNeAZOJcfRuFoHeGbmfHNjZMErsTPBOuNdHeB+6dbH0gU4Uibj9ZlWaJtXppwNdcDH9H8ttpQBRz/uS47d8aKOjHvgaVo3K3N0f4XKlnoCLiaPyThfB3gazqZ1w3C7TMad8CZJ5H4sqQN8DHPxI2l7zQFS3cenMR3fMTSJSFl+9PGN5HwAi8v2cfiFBkd5YhKFXI7ByxLkPkm5QjZDC2J8RvVqWlNavQhR6rDHmIQ7OTFGJq3umnx2o7Fos7Wm02asS4tjOsXQuJyZTiGncRTjUkmr48TmDzY344p/TKldiJ4usi/pQRDqV7FceNELJM58G6K9QhyqLbT4EDam/l2IuFiF8CJwJUBA4801IL25Ymrdx62MUlV8q+HxHZv7w8qCi0pd/T9gcUEjfrTmPBzPOrUUOBhZeNzyuO2/rSXBAQn1i56OgfFPSl14NC2dcc0N/H/gn1afbR89JErzAAAAAElFTkSuQmCC"/>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAASpJREFUSEvtlL9KA0EQh78rgk9gKaRPYyUoAZMnSaoEOy21MYIhZdJqIeZJkiIQsLKxTnqfQCyUgVncLOju3h8vxQ4suyxzv29n5mYyarKsJi4J/G+ZL5Lqgb7yMc9r84JPgJUC28BLLDwP+BB4A2QXewdaugfzY8ENjVQitk0ilsg/Q8mx4AfA1NZlSK2HVYB7wLNHuA/MQ+AxEZ8CByp6DEz1fAW86vkDWJcNtvU6wEIvusAyBGb72BE3AVliPqFYsPiLbXXtzOoRcKsOvhLEgr9U9w4QTgLvf6qlnWZat0urnX77uUurcWz3JPBOO90AY6vfYtP5l7+ZD8KYuH18HjCxij7mzMxyd0JdANfAUVGC8/0GuAeezL1vNJbM/5FL4MpS6wrXlupvNdhCH6fTj0MAAAAASUVORK5CYII="/>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAhlJREFUSEvt1kvIjWEQB/Df55Zyl4UdUq4pNjYoksuKkkvJAlFsLEQ+JCwQpazkWmIhZMFGKPeFshC5bJCFy4qInURT8+r0cnrfo1Mf9U2dOu88M/Of2zPPdOgi6ugiXH8LPB6zMQw3cKfVAFoFHoHjmFMCeoxFeFnXgVaAB+M5hjcx/gqT8aUOeCvAh7E+jR7B/gTpxKbk78O2dgM/xQTcxsyS8XuYhmeY2G7gb+iFvdheMh68rQiZPu0G/pEGd2NXyXh870xerfLVEkqD3cCN2e5OdWVj/3PNFWOvPw42TKWv6IejWFcK6RjW5iQbmGehu7HE+6XWLOKYyeNwHstS+i6m4xOm4HXyx+ABAjBeqni1gi7mw/EEk8q5bwZ8EqvxGUMQd3gBLqWBiP4CemIp+iZ/Pq4m/2M6E3O9mPGVETeCLMfZ1DiAzU06ZwviPGhNPp/xfx6u1Y24B15gFN5iKt6l8mJswIz8voyI6kp+j8b9XBKiZPFoFFOvMuIQWIEzKRkG5uJNxT2Jekd0sTAELUQ49htVXadzWcNQfJ+1KurcaCzshKOHMDQP/ljbQqkKOFK+B/HYFxRd/RDRrb0zlbF5DEiB79iBWAqaUhVwoRjX6ATGVqQ6HFqFRxVyLW2Z4eSS/MWyNyiNf8jGOo3rVYB1U93MTqw+N/NwFm7VBfxvgUdiZXp/qmF81g68bnPVNlhXsMuAfwJfh3Afqx23wAAAAABJRU5ErkJggg=="/>
+</div>
+
+<div class="container-section">
+    <div class="scrolling-section">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Subscriptions</a></li>
+            <li><a href="#">Shorts</a></li>
+        </ul>
+        <hr>
+        <ul>
+            <li><a href="#">Library</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#">Downloads</a></li>
+            <li><a href="#">WatchLater</a></li>
+            <li><a href="#">Your clips</a></li>
+            <li><a href="#">Show more</a></li>
+        </ul>
+        <hr>
+        <ul>
+            <li><a href="#">Subsriptions</a></li>
+            <li><a href="#">Trending</a></li>
+            <li><a href="#">Music</a></li>
+            <li><a href="#">Gaming</a></li>
+            <li><a href="#">Sports</a></li>
+            <li><a href="#">Show more</a></li>
+        </ul>
+    </div>
+    <!--middle Section-->
+    <div class="content-section">
+        <div class="video">
+        <video src="HTML & CSS Full Course - Beginner to Pro.mp4" class="video" controls autoplay muted>HTML & CSS Full Course - Beginner to Pro</video>
+        <p style="font-size: large; font-weight: 600;">HTML & CSS Full Course - Beginner to Pro</p>
+        </div>
+        
+        <div class="comment-section">
+           
+            <div class="creator-reaction-section">
+                <div class="creator-info-section">
+                    <img src="practise-photo1.png" alt="the-guy's-logo" class="creators-dp-image">
+                    <div class="name-subscribers">
+                        <span class="creator-name" style="display: block;">Super-simple Dev</span>
+                        <span class="related-video-viewers"style="display: block;">&#183 1.2M subscribers</span>
+                    </div>
+                    <button class="Subscribe"><i class="fa-regular fa-bell"> </i>Subscribe</button>
+                </div>
+                
+                <div class="like-section">
+                    <div class="btn-group" style="display: inline-block;">
+                        <button><i class="fa-regular fa-thumbs-up"></i> 841k</button>
+                        <button><i class="fa-regular fa-thumbs-down"></i></button>
+                    </div>
+
+                    <button><i class="fa-solid fa-share"></i> Share</button>
+                    <button><i class="fa-solid fa-download"></i> Download</button>
+                    <button><i class="fa-solid fa-ellipsis"></i></button>
+                </div>
+            </div>
+            <div class="description">
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, molestias facere incidunt, quam nihil necessitatibus laborum mollitia porro itaque eum blanditiis hic, ab voluptatum cupiditate aliquid tempora modi quae numquam?
+                </p>
+            </div>
+            <div class="comments">
+                <caption class="comment-caption">Comments</caption>
+                <div class="comment-bar">
+                    <div class="comment-user-dp">
+                        <img src="practise-photo1.png" alt="commentor-user-pic" class="the-dp">
+                    </div>
+                    <div class="comment-user-details">
+                        <span class="user-id">@Simpledev </span><span class="comment-duration" style="font-size: small;font-family: sans-serif;color: rgb(129, 125, 125);">1 week Ago</span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi sed ex amet beatae facilis, repellat ipsum quo asperiores quae similique consequatur repellendus, hic qui est ratione id laborum vero officiis.</p>
+                        <div class="comment-like-section">
+                            <button><i class="fa-regular fa-thumbs-up"></i> 18</button>
+                            <button><i class="fa-regular fa-thumbs-down"></i></button>
+                            <button><a href="#"> Reply</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-bar">
+                    <div class="comment-user-dp">
+                        <img src="practise-photo1.png" alt="commentor-user-pic" class="the-dp">
+                    </div>
+                    <div class="comment-user-details">
+                        <span class="user-id">@Simpledev </span><span class="comment-duration" style="font-size: small;font-family: sans-serif;color: rgb(129, 125, 125);">1 week Ago</span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi sed ex amet beatae facilis, repellat ipsum quo asperiores quae similique consequatur repellendus, hic qui est ratione id laborum vero officiis.</p>
+                        <div class="comment-like-section">
+                            <button><i class="fa-regular fa-thumbs-up"></i> 18</button>
+                            <button><i class="fa-regular fa-thumbs-down"></i></button>
+                            <button><a href="#"> Reply</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-bar">
+                    <div class="comment-user-dp">
+                        <img src="practise-photo1.png" alt="commentor-user-pic" class="the-dp">
+                    </div>
+                    <div class="comment-user-details">
+                        <span class="user-id">@Simpledev </span><span class="comment-duration" style="font-size: small;font-family: sans-serif;color: rgb(129, 125, 125);">1 week Ago</span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi sed ex amet beatae facilis, repellat ipsum quo asperiores quae similique consequatur repellendus, hic qui est ratione id laborum vero officiis.</p>
+                        <div class="comment-like-section">
+                            <button><i class="fa-regular fa-thumbs-up"></i> 18</button>
+                            <button><i class="fa-regular fa-thumbs-down"></i></button>
+                            <button><a href="#"> Reply</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-bar">
+                    <div class="comment-user-dp">
+                        <img src="practise-photo1.png" alt="commentor-user-pic" class="the-dp">
+                    </div>
+                    <div class="comment-user-details">
+                        <span class="user-id">@Simpledev </span><span class="comment-duration" style="font-size: small;font-family: sans-serif;color: rgb(129, 125, 125);">1 week Ago</span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi sed ex amet beatae facilis, repellat ipsum quo asperiores quae similique consequatur repellendus, hic qui est ratione id laborum vero officiis.</p>
+                        <div class="comment-like-section">
+                            <button><i class="fa-regular fa-thumbs-up"></i> 18</button>
+                            <button><i class="fa-regular fa-thumbs-down"></i></button>
+                            <button><a href="#"> Reply</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-bar">
+                    <div class="comment-user-dp">
+                        <img src="practise-photo1.png" alt="commentor-user-pic" class="the-dp">
+                    </div>
+                    <div class="comment-user-details">
+                        <span class="user-id">@Simpledev </span><span class="comment-duration" style="font-size: small;font-family: sans-serif;color: rgb(129, 125, 125);">1 week Ago</span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi sed ex amet beatae facilis, repellat ipsum quo asperiores quae similique consequatur repellendus, hic qui est ratione id laborum vero officiis.</p>
+                        <div class="comment-like-section">
+                            <button><i class="fa-regular fa-thumbs-up"></i> 18</button>
+                            <button><i class="fa-regular fa-thumbs-down"></i></button>
+                            <button><a href="#"> Reply</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-bar">
+                    <div class="comment-user-dp">
+                        <img src="practise-photo1.png" alt="commentor-user-pic" class="the-dp">
+                    </div>
+                    <div class="comment-user-details">
+                        <span class="user-id">@Simpledev </span><span class="comment-duration" style="font-size: small;font-family: sans-serif;color: rgb(129, 125, 125);">1 week Ago</span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi sed ex amet beatae facilis, repellat ipsum quo asperiores quae similique consequatur repellendus, hic qui est ratione id laborum vero officiis.</p>
+                        <div class="comment-like-section">
+                            <button><i class="fa-regular fa-thumbs-up"></i> 18</button>
+                            <button><i class="fa-regular fa-thumbs-down"></i></button>
+                            <button><a href="#"> Reply</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-bar">
+                    <div class="comment-user-dp">
+                        <img src="practise-photo1.png" alt="commentor-user-pic" class="the-dp">
+                    </div>
+                    <div class="comment-user-details">
+                        <span class="user-id">@Simpledev </span><span class="comment-duration" style="font-size: small;font-family: sans-serif;color: rgb(129, 125, 125);">1 week Ago</span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi sed ex amet beatae facilis, repellat ipsum quo asperiores quae similique consequatur repellendus, hic qui est ratione id laborum vero officiis.</p>
+                        <div class="comment-like-section">
+                            <button><i class="fa-regular fa-thumbs-up"></i> 18</button>
+                            <button><i class="fa-regular fa-thumbs-down"></i></button>
+                            <button><a href="#"> Reply</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-bar">
+                    <div class="comment-user-dp">
+                        <img src="practise-photo1.png" alt="commentor-user-pic" class="the-dp">
+                    </div>
+                    <div class="comment-user-details">
+                        <span class="user-id">@Simpledev </span><span class="comment-duration" style="font-size: small;font-family: sans-serif;color: rgb(129, 125, 125);">1 week Ago</span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi sed ex amet beatae facilis, repellat ipsum quo asperiores quae similique consequatur repellendus, hic qui est ratione id laborum vero officiis.</p>
+                        <div class="comment-like-section">
+                            <button><i class="fa-regular fa-thumbs-up"></i> 18</button>
+                            <button><i class="fa-regular fa-thumbs-down"></i></button>
+                            <button><a href="#"> Reply</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-bar">
+                    <div class="comment-user-dp">
+                        <img src="practise-photo1.png" alt="commentor-user-pic" class="the-dp">
+                    </div>
+                    <div class="comment-user-details">
+                        <span class="user-id">@Simpledev </span><span class="comment-duration" style="font-size: small;font-family: sans-serif;color: rgb(129, 125, 125);">1 week Ago</span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi sed ex amet beatae facilis, repellat ipsum quo asperiores quae similique consequatur repellendus, hic qui est ratione id laborum vero officiis.</p>
+                        <div class="comment-like-section">
+                            <button><i class="fa-regular fa-thumbs-up"></i> 18</button>
+                            <button><i class="fa-regular fa-thumbs-down"></i></button>
+                            <button><a href="#"> Reply</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-bar">
+                    <div class="comment-user-dp">
+                        <img src="practise-photo1.png" alt="commentor-user-pic" class="the-dp">
+                    </div>
+                    <div class="comment-user-details">
+                        <span class="user-id">@Simpledev </span><span class="comment-duration" style="font-size: small;font-family: sans-serif;color: rgb(129, 125, 125);">1 week Ago</span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi sed ex amet beatae facilis, repellat ipsum quo asperiores quae similique consequatur repellendus, hic qui est ratione id laborum vero officiis.</p>
+                        <div class="comment-like-section">
+                            <button><i class="fa-regular fa-thumbs-up"></i> 18</button>
+                            <button><i class="fa-regular fa-thumbs-down"></i></button>
+                            <button><a href="#"> Reply</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-bar">
+                    <div class="comment-user-dp">
+                        <img src="practise-photo1.png" alt="commentor-user-pic" class="the-dp">
+                    </div>
+                    <div class="comment-user-details">
+                        <span class="user-id">@Simpledev </span><span class="comment-duration" style="font-size: small;font-family: sans-serif;color: rgb(129, 125, 125);">1 week Ago</span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi sed ex amet beatae facilis, repellat ipsum quo asperiores quae similique consequatur repellendus, hic qui est ratione id laborum vero officiis.</p>
+                        <div class="comment-like-section">
+                            <button><i class="fa-regular fa-thumbs-up"></i> 18</button>
+                            <button><i class="fa-regular fa-thumbs-down"></i></button>
+                            <button><a href="#"> Reply</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
+
+    <!--Third side-->
+    <div class="relatablevideo-section">
+            <div class="section-1video">
+                
+                    <img src="image1.webp" alt="this is the first relatablevideo" class="video-image">
+            
+                <div class="related-video-title">
+                    <span style="font-weight: bold;">This is how the HTML line works</span>
+                    <div class="chanel-name">Code channel</div>
+                <div class="related-video-viewers">34k views &#183  1 month Ago</div>
+                </div>
+                
+            </div>
+            <div class="section-1video">
+                
+                <img src="image2.jpg" alt="this is the first relatablevideo" class="video-image">
+        
+                <div class="related-video-title">
+                    <span style="font-weight: bold;">Trying foods from Turkiye</span>
+                    <div class="chanel-name">World Food tour</div>
+                <div class="related-video-viewers">5M views &#183  3 weeks Ago</div>
+                </div>
+            
+            </div>
+
+            <div class="section-1video">
+                
+                <img src="image3.jpg" alt="this is the first relatablevideo" class="video-image">
+        
+                <div class="related-video-title">
+                    <span style="font-weight: bold;">Jesus you are Lord</span>
+                    <div class="chanel-name">Benjamin Dube</div>
+                <div class="related-video-viewers">105k views &#183  10 days Ago</div>
+                </div>
+            
+            </div>
+    <!--
+            <div class="section-1video">
+                
+                <img src="image1.webp" alt="this is the first relatablevideo" class="video-image">
+        
+                <div class="related-video-title">
+                    <span style="font-weight: bold;">This is how the HTML line works</span>
+                    <div class="chanel-name">Code channel</div>
+                <div class="related-video-viewers">34k views . 1 month Ago</div>
+                </div>
+            
+            </div>
+
+            <div class="section-1video">
+                
+                <img src="image1.webp" alt="this is the first relatablevideo" class="video-image">
+        
+                <div class="related-video-title">
+                    <span style="font-weight: bold;">This is how the HTML line works</span>
+                    <div class="chanel-name">Code channel</div>
+                <div class="related-video-viewers">34k views . 1 month Ago</div>
+                </div>
+            
+            </div>
+
+            <div class="section-1video">
+                
+                <img src="image1.webp" alt="this is the first relatablevideo" class="video-image">
+        
+                <div class="related-video-title">
+                    <span style="font-weight: bold;">This is how the HTML line works</span>
+                    <div class="chanel-name">Code channel</div>
+                <div class="related-video-viewers">34k views . 1 month Ago</div>
+                </div>
+            
+            </div>
+
+            <div class="section-1video">
+                
+                <img src="image1.webp" alt="this is the first relatablevideo" class="video-image">
+        
+                <div class="related-video-title">
+                    <span style="font-weight: bold;">This is how the HTML line works</span>
+                    <div class="chanel-name">Code channel</div>
+                <div class="related-video-viewers">34k views . 1 month Ago</div>
+                </div>
+            
+            </div>
+
+            <div class="section-1video">
+                
+                <img src="image1.webp" alt="this is the first relatablevideo" class="video-image">
+        
+                <div class="related-video-title">
+                    <span style="font-weight: bold;">This is how the HTML line works</span>
+                    <div class="chanel-name">Code channel</div>
+                <div class="related-video-viewers">34k views . 1 month Ago</div>
+                </div>
+            
+            </div>
+
+            <div class="section-1video">
+                
+                <img src="image1.webp" alt="this is the first relatablevideo" class="video-image">
+        
+                <div class="related-video-title">
+                    <span style="font-weight: bold;">This is how the HTML line works</span>
+                    <div class="chanel-name">Code channel</div>
+                <div class="related-video-viewers">34k views . 1 month Ago</div>
+                </div>
+            
+            </div>
+
+            <div class="section-1video">
+                
+                <img src="image1.webp" alt="this is the first relatablevideo" class="video-image">
+        
+                <div class="related-video-title">
+                    <span style="font-weight: bold;">This is how the HTML line works</span>
+                    <div class="chanel-name">Code channel</div>
+                <div class="related-video-viewers">3.1M views . 3 month Ago</div>
+                </div>
+            
+            </div>
+        -->
+    </div>
+</div>
+</body>
+</html>
